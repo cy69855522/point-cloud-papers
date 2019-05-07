@@ -31,6 +31,7 @@
 ### 参考
 - [译文](https://www.jianshu.com/p/2307cebbb017)
 - [PW](https://paperswithcode.com/paper/pointnet-deep-learning-on-point-sets-for-3d)
+- [Pytorch Code](https://github.com/halimacc/pointnet3)
 ### 提问
 - what2中的刚性运动不变性是什么？
 - why2中否定排序策略的解释是什么意思？
