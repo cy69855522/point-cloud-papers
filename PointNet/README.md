@@ -8,6 +8,7 @@
 ![](workflow.png)
 - 分类：N * 3 的二维张量（点的数量 * xyz坐标）Input → 空间变换层 T-Net → MLP → 空间变换层 T-Net → MLP → 列MaxPooling → 全连接 → Output
 - T-Net: 提取1024个全局特征并转换为3×3的线性变换矩阵，学习如何对点云做线性变换。具体过程：三层卷积(stride=1)，相当于利用一个MLP对每个点分别做非线性变换，升维至1024，获得1024×N的张量，最大池化获得长1024的全局特征向量，MLP降维至9。
+
 ![](model.png)
 ### 要点记录
 #### What
@@ -28,6 +29,7 @@
   - 我们的想法是通过对集合中的变换元素应用对称函数来近似一个在点集上定义的一般函数。相当于一个高级的reduce函数（python functools 模块中的内置函数）。我们通过 MLP 来近似 h，并通过单一变量函数和最大池函数的组合来近似 g。
   
 ![](f1.png)
+
 3. 点云经历某些几何变换（例如刚性变换）时，语义标记是不变的。因此，我们期望我们的点集的学习表示对这些变换是不变的。一种自然的解决方案是在特征提取之前将所有输入集对齐到规范空间。
 #### Result
 ![](result1.png)
@@ -35,10 +37,13 @@
 ![](e1.png)
 ![](e2.png)
 #### Drawbacks
-- T-Net对实际上对点云进行了线性变换，如果改为类似STN（空间变换网络）中的仿射变换会不会更好?也许可以提供平移不变性?
-- PointNet仅考虑自身信息与全局信息，完全忽略了邻域信息
+- T-Net对实际上对点云进行了线性变换，如果改为类似STN（空间变换网络）中的仿射变换也许可以提供平移不变性。
+- PointNet仅考虑自身信息与全局信息，完全忽略了邻域信息。
+- T-Net效果不是很好，仅提升2%，用的参数很多。
+- 
 ### 参考
 - [译文](https://www.jianshu.com/p/2307cebbb017)
+- [解析](https://blog.csdn.net/hit1524468/article/details/80023779)
 - [PW](https://paperswithcode.com/paper/pointnet-deep-learning-on-point-sets-for-3d)
 - [Pytorch Code](https://github.com/halimacc/pointnet3)
 ### 提问
