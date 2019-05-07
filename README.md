@@ -21,6 +21,9 @@
   - [ShapeNetSem](https://shapenet.org/)：ShapeNet 缩减版，包含了270类的12000个物体。
 - [更多数据集中文介绍](https://blog.csdn.net/u014636245/article/details/83269939)
 
+## 模型
+[ModelNet Benchmark Leaderboard](http://modelnet.cs.princeton.edu/)
+![](benchmark.png)
 
 # 其他
 - [图网络一般适用的数据集整理](https://www.jianshu.com/p/67137451b67f)
