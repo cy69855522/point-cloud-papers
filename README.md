@@ -1,4 +1,4 @@
-# point-cloud-papers
+# Point-Cloud-Papers
 
 ## 友情链接
 - [awesome-point-cloud-analysis](https://github.com/Yochengliu/awesome-point-cloud-analysis)
