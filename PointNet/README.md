@@ -41,7 +41,7 @@
 - PointNet仅考虑自身信息与全局信息，完全忽略了邻域信息。
 - T-Net效果不是很好，仅提升2%，用的参数很多。
 - 网络不够深，没有残差结构。
-- 
+- 忽略了边信息、密度信息。
 ### 参考
 - [译文](https://www.jianshu.com/p/2307cebbb017)
 - [解析](https://blog.csdn.net/hit1524468/article/details/80023779)
