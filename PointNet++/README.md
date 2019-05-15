@@ -30,5 +30,6 @@
 - CNN介绍：However, exploiting local structure has proven to be important for the success of convolutional architectures. A CNN takes data defined on regular grids as the input and is able to progressively capture features at increasingly larger scales along a multi-resolution hierarchy. At lower levels neurons have smaller receptive fields whereas at higher levels they have larger receptive fields. The ability to abstract local patterns along the hierarchy allows better generalizability to unseen cases.
 ## 参考
 - [博客解析](https://blog.csdn.net/qq_15332903/article/details/80261951)
+- [译文](https://blog.csdn.net/weixin_40664094/article/details/83902950)
 ## 提问
 1. 
