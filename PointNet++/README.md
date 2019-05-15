@@ -8,10 +8,9 @@
 ## 要点记录
 ### What
 1. PointNet++如何引入局部信息？
-2. PointNet++如何解决点集无序问题？
-3. PointNet++如何解决密度不均问题？
+2. PointNet++如何解决密度不均问题？
 ### How
-1.
+1. 
 ### Why
 1.
 ### Result
@@ -20,6 +19,8 @@
 - 对点集进行采样丢失了信息
 - 对点集的采样鲁棒性差，无法避免采样到噪点，影响精度
 - 多尺度的特征提取实际上并未解决密度不均匀的问题
+## 好句
+- CNN介绍：However, exploiting local structure has proven to be important for the success of convolutional architectures. A CNN takes data defined on regular grids as the input and is able to progressively capture features at increasingly larger scales along a multi-resolution hierarchy. At lower levels neurons have smaller receptive fields whereas at higher levels they have larger receptive fields. The ability to abstract local patterns along the hierarchy allows better generalizability to unseen cases.
 ## 参考
 - 
 ## 提问
