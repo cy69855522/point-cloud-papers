@@ -6,6 +6,11 @@
 
 ## 背景
 - FPS 最远点采样法：Farthest Point Sampling 的原理是先随机选一个点,然后选择离这个点距离最远的点加入点集,然后继续迭代,选择距离点集中所有点最远的点,直到选出需要的个数为止。
+    
+    ![](fps图解.png)
+    
+    ![](fps调试.png)
+    
 ## 模型流程
 ![](结构.png)
 - set abstraction: 主要分为Sampling layer、Grouping layer 和PointNet layer
