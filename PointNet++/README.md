@@ -15,7 +15,7 @@
 ![](结构.png)
 - set abstraction: 主要分为Sampling layer、Grouping layer 和PointNet layer
     - Sampling layer：给定输入点集｛x1，x2，x3，……｝，其中包含 N 个点，通过 FPS 采样获得 N' 个点。
-    - Grouping layer：本层输入为 `① N * (d + C) = 点数量 * (三维欧几里得坐标 + 点特征)  ② N' * d = N' 个采样点坐标`，输出是 G 组 `N' * K * (d + C)` 特征，K 代表邻域点数量，由 KNN 计算得出， K 在不同的组是不同的。采用Ball query分组算法，原理: 给定中心点，把给定半径内的点都包括进来，同时给定邻居点个数上限，每组的半径长度不同。
+    - Grouping layer：本层输入为 `① N * (d + C) = 点数量 * (三维欧几里得坐标 + 点特征)  ② N' * d = N' 个采样点坐标`，输出是 G 组 `N' * K * (d + C)` 特征，K 代表邻域点数量，由 KNN 计算得出， K 在不同的组是不同的。采用 Ball query 分组算法，原理: 给定中心点，把给定半径内的点都包括进来，同时给定邻居点个数上限，提取距离最近的前 K 个邻居，如果数量不足则复制自身凑数。
     - PointNet layer：输入为 G 组的 `N' * K * (d + C)`，输出为一个 `N' * (d + C')`。作者利用一个迷你的 PointNet 对每组的 K 个点提取组全局特征然后把 G 个组的组全局特征向量拼接起来。
 
 通过多个set abstraction，最后进行分类和分割：
