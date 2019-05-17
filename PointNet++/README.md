@@ -74,4 +74,4 @@
 - [知乎解读](https://zhuanlan.zhihu.com/p/44809266)
 - [PointNet系列博客](https://blog.csdn.net/oliongs/article/details/82698744 )
 ## 提问
-1. 
+1. 非刚性分类的实验没看懂
