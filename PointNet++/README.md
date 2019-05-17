@@ -72,7 +72,8 @@
 - [译文（上）](https://blog.csdn.net/weixin_40664094/article/details/83902950)
 - [译文（下）](https://blog.csdn.net/weixin_40664094/article/details/83932046)
 - [知乎解读](https://zhuanlan.zhihu.com/p/44809266)
-- [PointNet系列博客](https://blog.csdn.net/oliongs/article/details/82698744 )
+- [PointNet系列博客](https://blog.csdn.net/oliongs/article/details/82698744)
+- [Pytorch代码](https://github.com/halimacc/pointnet3)
 ## 提问
 1. 非刚性分类的实验没看懂。
 2. 上采样层的线性插值公式如何理解？
