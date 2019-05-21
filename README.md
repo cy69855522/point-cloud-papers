@@ -1,4 +1,4 @@
-# Point-Cloud-Papers
+# Point-Cloud
 ## 背景
 - 三维深度学习子任务简介
 ![](background.png)
@@ -40,8 +40,17 @@
 
 - 三维重建、文物修复
 - [……](https://mp.weixin.qq.com/s?__biz=MzU4OTg2NjUxOQ==&mid=2247483743&idx=1&sn=a350f8c3ebff44748624007a920ec047&chksm=fdc7b227cab03b31b9fe0113798a5f88d1c583a26fe6ff7367f22d3cb6c0d9e0c17d5cca21a8&scene=7&key=a22ef280647b088d119afe171b90066c3ea44b8f2d219c75213943eac3f896a8ba9764d7d30e0d249f229518eacc4b5b653863d28b65d6cb7dafe9492ca48d61b08fbcee40c9fa8310a7a4f5947d328c&ascene=0&uin=NTg0MjEwMDE4&devicetype=Windows+10&version=62060739&lang=zh_CN&pass_ticket=Ok3g2hCAhpj0r%2BZS8P8uCJsEVH7xb84PflcJ2P8Des8EJUdPMVdBPTRZCS2QvKo1)
-## 论文
-### 2016
+# 论文
+__`dat.`__: dataset &emsp; | &emsp; __`cls.`__: classification &emsp; | &emsp; __`rel.`__: retrieval &emsp; | &emsp; __`seg.`__: segmentation     
+__`det.`__: detection &emsp; | &emsp; __`tra.`__: tracking &emsp; | &emsp; __`pos.`__: pose &emsp; | &emsp; __`dep.`__: depth     
+__`reg.`__: registration &emsp; | &emsp; __`rec.`__: reconstruction &emsp; | &emsp; __`aut.`__: autonomous driving     
+__`oth.`__: other, including normal-related, correspondence, mapping, matching, alignment, compression, generative model...
+
+Statistics: :fire: code is available & stars >= 100 &emsp;|&emsp; :star: citation >= 50
+
+---
+
+## 2016
 ## 2017
 - [[CVPR](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)] PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation. [[tensorflow](https://github.com/charlesq34/pointnet)][[pytorch](https://github.com/fxia22/pointnet.pytorch)] [__`cls.`__ __`seg.`__ __`det.`__] :fire: :star:
 - [[CVPR](http://openaccess.thecvf.com/content_cvpr_2017/papers/Simonovsky_Dynamic_Edge-Conditioned_Filters_CVPR_2017_paper.pdf)] Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs. [__`cls.`__] :star:
@@ -316,7 +325,7 @@
 - [[nuScenes](https://d3u7q4379vrm7e.cloudfront.net/object-detection)] The nuScenes dataset is a large-scale autonomous driving dataset.
 - [[PreSIL](https://uwaterloo.ca/waterloo-intelligent-systems-engineering-lab/projects/precise-synthetic-image-and-lidar-presil-dataset-autonomous)] Precise Synthetic Image and LiDAR (PreSIL) Dataset for Autonomous Vehicle Perception. It consists of over 50,000 instances and includes high-definition images with full resolution depth information, semantic segmentation (images), point-wise segmentation (point clouds), ground point labels (point clouds), and detailed annotations for all vehicles and people. [[paper](https://arxiv.org/abs/1905.00160)] [__`det.`__ __`aut.`__]
 - [[3D Match](http://3dmatch.cs.princeton.edu/)] Keypoint Matching Benchmark, Geometric Registration Benchmark, RGB-D Reconstruction Datasets. [__`reg.`__ __`rec.`__ __`oth.`__]
-### 2020
+## 2020
 
 # 其他
 - [图网络一般适用的数据集整理](https://www.jianshu.com/p/67137451b67f)
