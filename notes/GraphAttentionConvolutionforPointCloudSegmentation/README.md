@@ -3,6 +3,9 @@
 # 针对的问题
 ![](问题.png)
 - 标准图卷积具有各向同性，如上图左，对来自不同方向的节点一视同仁。GAC 旨在利用注意力机制为不同的相邻点分配不同权重
+  - Left: The weights of standard convolution are determined by the neighbors’ spatial positions, and the learned feature at point 1 characterizes all of its neighbors indistinguishably.
+  - Right: In GAC, the attentional weights on ”chair” (the brown dotted arrows) are masked, so that the convolution kernel can focus on the points of ”table”.
+
 
 ![](对称归一化.png)
 
