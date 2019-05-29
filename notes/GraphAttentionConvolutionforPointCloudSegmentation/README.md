@@ -7,11 +7,14 @@
   - Right: In GAC, the attentional weights on ”chair” (the brown dotted arrows) are masked, so that the convolution kernel can focus on the points of ”table”.
 
 # 模型流程
+![](注意力.png)
+
+- 对于每一个定点，以当前节点和周围节点的**相对位置**、**特征差分**作为输入，预测出对应权重值 α
+- 3：点云坐标，F：旧层特征维度，K：新层特征维度
+
 ![](模型.png)
 
 - 
-
-![](注意力.png)
 
 # 伪代码
 
