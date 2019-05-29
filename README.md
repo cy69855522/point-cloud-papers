@@ -30,8 +30,6 @@
 ## 排行榜
 [ModelNet Benchmark Leaderboard](http://modelnet.cs.princeton.edu/)
 
-![](benchmark.png)
-
 ## 应用方向
 - 机械制造，逆向工程，机械检测
 - 无人驾驶
