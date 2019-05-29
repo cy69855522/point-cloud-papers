@@ -7,11 +7,20 @@
   - Right: In GAC, the attentional weights on ”chair” (the brown dotted arrows) are masked, so that the convolution kernel can focus on the points of ”table”.
 
 # 模型流程
+## 注意力权重
 ![](注意力.png)
 
-- 对于每一个定点，以当前节点和周围节点的**相对位置**、**特征差分**作为输入，预测出对应权重值 α
+- 对于每一个定点，以当前节点和周围节点的**相对位置**、**特征差分**作为输入，预测出对应权重值 α，并对**同一通道**的所有特征做 **SoftMax**，以缓解密度问题
 - 3：点云坐标，F：旧层特征维度，K：新层特征维度
+### 权重计算
+![](注意力公式.png)
+### 权重归一化
+![](注意力归一化.png)
+## 卷积聚合
+![](注意力卷积.png)
 
+- 这里 `*` 代表哈达玛积（element-wise production of two vectors）
+## 前向传播
 ![](模型.png)
 
 - 
