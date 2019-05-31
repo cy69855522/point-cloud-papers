@@ -81,8 +81,9 @@
 - 10、忽略了特征通道间的相关性
   - 可采用 全局池化 + 门控机制 + sigmoid 对特征通道施加注意力 [参考：SENet](https://blog.csdn.net/wangkun1340378/article/details/79092001)
 # 疑问
-![](疑问1.png)
-- 这里是指双向边吗？
+- ![](疑问1.png)
+  - 这里是指双向边吗？
+- 理论分析部分看不懂
 
 # 参考
 - [CSDN 总结](https://blog.csdn.net/weixin_39373480/article/details/88856169)
