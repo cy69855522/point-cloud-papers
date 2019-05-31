@@ -74,7 +74,7 @@
   - 引入胶囊，将低层次的信息传递到被认为能最好地处理这些信息的胶囊 [参考：CapsNet](https://baijiahao.baidu.com/s?id=1622872284216471702&wfr=spider&for=pc)
 - 7、FPS 采样对噪声鲁棒性不强，且继承了疏密问题
   - 考虑排除 outer，或构建可学习的采样方式
-  - 制作超分辨率点云图 [参考：SPG](http://www.sohu.com/a/247222177_715754)
+  - 制作超点图 [参考：SPG](http://www.sohu.com/a/247222177_715754)
 - 8、透视角度易引起点云采样不均，疏密程度受影响，除此之外网络也应该对物体的刚性变换具有强鲁棒性
   - 引入空间变换网络对点云进行仿射矫正 [参考：STN](https://www.baidu.com/link?url=noWevhNKsUMfL7RispH0p6tT7J-8lF8ipCSFu74Gwr2H9RlSJEe0pP0ObYiCSpYRh2P3JXWFtnyldifrbdNWJPn10A8bgvrcJdhFKdBnr3y&wd=&eqid=8210883800000b8e000000035ceef5bd)
 - 9、注意力模块中使用 MLP 对 相对位置△p 和 特征差分△h 施加非线性变换到 K 维，忽略了球域其他节点的信息（除了归一化部分）
