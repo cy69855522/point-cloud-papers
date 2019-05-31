@@ -25,9 +25,14 @@
 ## 前向传播
 ![](模型.png)
 
-- GACNet 先利用 FPS 在点云中采样，再划一个 k 为半径的球域，随机采样邻点，然后计算邻点 attention 权重。接着通过权重加权的卷积计算好每个根节点的特征，再 Graph Pooling（其实就是max或者mean池化），进行点云的下采样。在上采样过程中采用插值+直连的方法。
-
-# 伪代码
+- GACNet 利用 FPS 在点云中采样
+- 为每个采样点划一个 k 为半径的球域，在球域内随机采样固定个数邻点
+- 利用相对位置和特征差分计算邻点 attention 权重
+- 注意力卷积以更新根节点信息
+- 下采样层直接返回更新后的采样点
+- 上采样先对采样点做NIN卷积然后采用插值+直连的方法上采样
+- 再通过一层NIN卷积
+- 交叉熵分类
 
 # 实验结果
 ## 语义分割
@@ -80,4 +85,5 @@
 - 这里是指双向边吗？
 
 # 参考
-- [CSDN总结](https://blog.csdn.net/weixin_39373480/article/details/88856169)
+- [CSDN 总结](https://blog.csdn.net/weixin_39373480/article/details/88856169)
+- [Pytorch 代码](https://github.com/yanx27/GACNet/blob/master/model.py)
