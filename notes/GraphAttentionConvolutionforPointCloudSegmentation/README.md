@@ -63,18 +63,18 @@
   
   ![](对称归一化.png)
 
-- 2、可以增加对于注意力的 Angular Margin Loss 以显示地极化注意力分布 [参考：Arcface](https://blog.csdn.net/Wuzebiao2016/article/details/81839452)
+- 2、可以增加对于注意力的 Angular Margin Loss 以显式地极化注意力分布 [参考：Arcface](https://blog.csdn.net/Wuzebiao2016/article/details/81839452)
 - 3、浅层感受野太小
   - 由于网络结构不深，浅层网络所观察到的范围很有限，可以引入全局信息 [参考：PointNet](http://stanford.edu/~rqi/pointnet/)
 - 4、结构感受野限定
-  - 注意力机制的参考点为｛一阶相对位置，一阶特征差分｝，仅考虑了一阶邻域内的结构特征，不能通过网络层级的提升获得更高的感受野即无法获得二阶邻域的结构特征（除了混淆在特征中的信息），可以 ①扩大参考点范围 ②类比卷积，聚合邻域注意力
+  - 注意力机制的参考点为｛一阶相对位置，一阶特征差分｝，仅考虑了一阶邻域内的结构特征，不能通过网络层级的提升获得更高的感受野即无法获得二阶邻域的结构特征（混淆在特征中的信息也因为差分操作所剩无几），可以 ①扩大参考点范围 ②逐层卷积聚合邻域结构特征 ③引入中心坐标系
 - 5、下采样部分没有快捷连接
   - 虽然网络利用 U-Net 结构在上采样部分引入恒等映射，但对于下采样部分却没有，可以引入线性层构造残差学习 [参考：ResNet 第三页公式2](https://arxiv.org/pdf/1512.03385.pdf)
 - 6、逐层池化不仅破坏特征信息还破坏了结构信息
   - 引入胶囊，将低层次的信息传递到被认为能最好地处理这些信息的胶囊 [参考：CapsNet](https://baijiahao.baidu.com/s?id=1622872284216471702&wfr=spider&for=pc)
 - 7、FPS 采样对噪声鲁棒性不强，且继承了疏密问题
   - 考虑排除 outer，或构建可学习的采样方式
-  - 制作超点图 [参考：SPG](http://www.sohu.com/a/247222177_715754)
+  - 制作超点图进行降维 [参考：SPG](http://www.sohu.com/a/247222177_715754)
 - 8、透视角度易引起点云采样不均，疏密程度受影响，除此之外网络也应该对物体的刚性变换具有强鲁棒性
   - 引入空间变换网络对点云进行仿射矫正 [参考：STN](https://www.baidu.com/link?url=noWevhNKsUMfL7RispH0p6tT7J-8lF8ipCSFu74Gwr2H9RlSJEe0pP0ObYiCSpYRh2P3JXWFtnyldifrbdNWJPn10A8bgvrcJdhFKdBnr3y&wd=&eqid=8210883800000b8e000000035ceef5bd)
 - 9、注意力模块中使用 MLP 对 相对位置△p 和 特征差分△h 施加非线性变换到 K 维，忽略了球域其他节点的信息（除了归一化部分）
