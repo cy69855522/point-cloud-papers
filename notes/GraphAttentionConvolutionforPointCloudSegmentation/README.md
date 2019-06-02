@@ -83,6 +83,8 @@
 - 10、忽略了特征通道间的相关性
   - 可采用 全局池化 + 门控机制 + sigmoid 对特征通道施加注意力 [参考：SENet](https://blog.csdn.net/wangkun1340378/article/details/79092001)
     - Squeeze 操作对象可以尝试卷积核a而不是卷积结果
+- 11、softmax 使得各个新通道对应卷积核的总和为 1，破坏了不同卷积核间应该存在的特征分布
+  - 可以在各个不同通道引入可学习的斜率和偏置 [参考：BatchNormalization(scale、shift)](https://www.cnblogs.com/guoyaohua/p/8724433.html)
 # 疑问
 - ![](疑问1.png)
   - 这里是指双向边吗？
