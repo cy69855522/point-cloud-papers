@@ -85,6 +85,7 @@
     - Squeeze 操作对象可以尝试卷积核a而不是卷积结果
 - 11、softmax 使得各个新通道对应卷积核的总和为 1，破坏了不同卷积核间应该存在的特征分布
   - 可以在各个不同通道引入可学习的斜率和偏置 [参考：BatchNormalization(scale、shift)](https://www.cnblogs.com/guoyaohua/p/8724433.html)
+  - 或将 attention 机制与 w权重分离计算然后求哈达玛积
 # 疑问
 - ![](疑问1.png)
   - 这里是指双向边吗？
