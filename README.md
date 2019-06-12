@@ -60,7 +60,8 @@
   - 固定球半径 解决局部分组
   - 静态坐标+动态特征 生成卷积核
 - [🐍](notes/MiningPointCloudLocalStructuresbyKernelCorrelationandGraphPooling/README.md) [[CVPR](http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Mining_Point_Cloud_CVPR_2018_paper.pdf)] Mining Point Cloud Local Structures by Kernel Correlation and Graph Pooling. [[code](http://www.merl.com/research/license#KCNet)] [__`cls.`__ __`seg.`__]
-  - 
+  - k临近 解决局部分组
+  - 核相关类比卷积
 - [🐍](notes/AGraph-CNNfor3DPointCloudClassification/README.md) [[ICASSP](https://arxiv.org/abs/1812.01711)] A Graph-CNN for 3D Point Cloud Classification. [[tensorflow](https://github.com/maggie0106/Graph-CNN-in-3D-Point-Cloud-Classification)] [__`cls.`__] :fire:
 - [🐍](notes/DynamicGraphCNNforLearningonPointClouds/README.md) [[arXiv](https://arxiv.org/abs/1801.07829)] Dynamic Graph CNN for Learning on Point Clouds. [[tensorflow](https://github.com/WangYueFt/dgcnn)][[pytorch](https://github.com/muhanzhang/pytorch_DGCNN)] [__`cls.`__ __`seg.`__] :fire: :star:
 - [🐍](notes/RGCNN:RegularizedGraphCNNforPointCloudSegmentation/README.md) [[MM](https://arxiv.org/abs/1806.02952)] RGCNN: Regularized Graph CNN for Point Cloud Segmentation. [[tensorflow](https://github.com/tegusi/RGCNN)] [__`seg.`__]
