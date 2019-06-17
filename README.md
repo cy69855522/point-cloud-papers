@@ -73,9 +73,10 @@
   - KNN全连接
   - 动态相对（坐标 + 特征）+ 谱卷积
   - 正则化
-- [[CVPR](https://arxiv.org/abs/1811.07246)] PointConv: Deep Convolutional Networks on 3D Point Clouds. [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
-  - FPS + K邻近
-  - 参考蒙特卡罗估计为每个点引入度信息
+- [🐍] [[CVPR](https://arxiv.org/abs/1811.07246)] PointConv: Deep Convolutional Networks on 3D Point Clouds. [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
+  - K邻近
+  - 静态相对坐标
+  - 参考蒙特卡罗估计为每个点引入**度**信息
   - 卷积：Sum(MLP(△p)h/d)
   - 效率卷积：各通道共享卷积核，通过MLP转换到最后的输出
 ## 2019
