@@ -6,7 +6,9 @@
 # 模型流程
 ## 图卷积
 ![](公式1.png)
-- 利用 KNN 构造图，利用高斯核对每个边加权，其中 A(i) 是顶点 i 的 k 个最近邻居的集合。
+- 利用 KNN 构造图，利用高斯核对每个边加权，其中 A(i) 是顶点 i 的 k 个最近邻居的集合
+![](缩放.png)
+- 缩放到[-1， 1]
 ![](公式2.png)
 - 将卷积核定义为 L(归一化拉普拉斯) 的函数，可近似为 L 的多项式，使用切比雪夫多项式对其进行逼近，因此卷积核是 k 个可学习的权重 + 1 个偏置。（原文中推理傅里叶变换只是放到谱域上做解释）
 ## 前向传播
@@ -36,14 +38,13 @@
 ![](突出点可视化.png)
 
 # 改进方向
-- 1、
-  - 
+- 
 # 备注
 - 用切比雪夫多项式近似卷积核避免了拉普拉斯矩阵的分解，提高效率，并且使得学习的权重独立与图尺寸，但限制了权重分布
 # 疑问
 - 
 
-# 好句
+# 摘录
 - Previous work has taken different approaches to classifying 3D point clouds [14, 15, 16, 17, 18, 19, 20, 21], including rendering and processing a collection of 2D images (projections of the points onto an image plane from different perspectives), or binning the points into voxels. However, the former involves extensive data augmentation, preprocessing and heavy computation, and the latter introduces discretization error as well as use a relatively sparse format to represent the 3D data. 
 
 # 参考
