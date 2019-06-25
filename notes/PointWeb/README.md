@@ -14,6 +14,7 @@
 ![](公式1.png)
 
 ![](公式2.png)
+- imp 代表影响力， rel 代表关系
 
 ![](公式3.png)
 
@@ -22,7 +23,8 @@
 ![](公式6.png)
 
 ![](公式7.png)
-
+- a 是 element-wise 的
+- 总结起来就是 △F = MLP(-diff) * diff，其中 diff = Fj - Fi if i ≠ j else Fi，有点像引力和斥力
 ## 前向传播
 ![](模型.png)
 - 整体架构参考 PointNet++，但是在MLP之前增加了 AFA 模块
