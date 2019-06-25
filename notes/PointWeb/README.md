@@ -1,4 +1,4 @@
-# [PointWeb: EnhancingLocalNeighborhoodFeaturesforPointCloudProcessing](http://jiaya.me/papers/pointweb_cvpr19.pdf)
+# [PointWeb: Enhancing Local Neighborhood Features for Point Cloud Processing](http://jiaya.me/papers/pointweb_cvpr19.pdf)
 本文介绍了 PointWeb ，一种从点云中从局部邻域中 提取上下文特征的新方法。与以前的工作不同，我们 在局部邻域中将每个点密切地连接在一起，旨在基于 局部区域特征指定每个点的特征以更好地表示该区域。 提出了一种新颖的模块，即自适应特征调整（ AFA ）模 块，用于找到点之间的相互作用。对于每个局部区域， 将具有点对 之间的元素影响的撞击图应用于特征差异 图。然后，根据自适应学习的影响指标，由同一区域 中的其他特征拉动或推动每个特征。调整的特征用区 域信息很好地编码，因此有益于点云识别任务，例如 点云分割和分类。实验结果表明，我们的模型在语义分割和形状分类数据集上都优于现有技术。
 
 # 论文动机
