@@ -55,10 +55,6 @@
   - 静态相对坐标 生成卷积核
 ## 2018
 ### 局部信息
-- [🐍](notes/GraphAttentionConvolutionforPointCloudSegmentation/README.md) [[CVPR](https://engineering.purdue.edu/~jshan/publications/2018/Lei%20Wang%20Graph%20Attention%20Convolution%20for%20Point%20Cloud%20Segmentation%20CVPR2019.pdf)] Graph Attention Convolution for Point Cloud Segmentation. [__`seg.`__]
-  - FPS 解决池化
-  - 固定球半径 解决局部分组
-  - 静态相对坐标 + 动态相对特征 生成卷积核
 - [🐍](notes/MiningPointCloudLocalStructuresbyKernelCorrelationandGraphPooling/README.md) [[CVPR](http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Mining_Point_Cloud_CVPR_2018_paper.pdf)] Mining Point Cloud Local Structures by Kernel Correlation and Graph Pooling. [[code](http://www.merl.com/research/license#KCNet)] [__`cls.`__ __`seg.`__]
   - k临近 解决局部分组
   - 静态相对坐标 + 核相关类比卷积
@@ -80,6 +76,10 @@
   - 卷积：Sum(MLP(△p)h/d)
   - 效率卷积：各通道共享卷积核，通过MLP转换到最后的输出
 ## 2019
+- [🐍](notes/GraphAttentionConvolutionforPointCloudSegmentation/README.md) [[CVPR](https://engineering.purdue.edu/~jshan/publications/2018/Lei%20Wang%20Graph%20Attention%20Convolution%20for%20Point%20Cloud%20Segmentation%20CVPR2019.pdf)] Graph Attention Convolution for Point Cloud Segmentation. [__`seg.`__]
+  - FPS 解决池化
+  - 固定球半径 解决局部分组
+  - 静态相对坐标 + 动态相对特征 生成卷积核
 - [🐍](notes/3DGraphEmbeddingLearningwithaStructure-awareLossFunctionforPointCloudSemanticInstanceSegmentation/README.md) [[arXiv](https://arxiv.org/abs/1902.05247)] 3D Graph Embedding Learning with a Structure-aware Loss Function for Point Cloud Semantic Instance Segmentation. [__`seg.`__]
   - k临近 解决局部分组
   - MLP(特征拼接) 生成卷积核
