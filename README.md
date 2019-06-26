@@ -73,7 +73,7 @@
   - K邻近
   - 静态相对坐标
   - 参考蒙特卡罗估计为每个点引入**度**信息
-  - 卷积：Sum(MLP(△p)h/d)
+  - 卷积：Sum(MLP(△p) * Cin / MLP(d))
   - 效率卷积：各通道共享卷积核，通过MLP转换到最后的输出
 ## 2019
 - [🐍](notes/GraphAttentionConvolutionforPointCloudSegmentation/README.md) [[CVPR](https://engineering.purdue.edu/~jshan/publications/2018/Lei%20Wang%20Graph%20Attention%20Convolution%20for%20Point%20Cloud%20Segmentation%20CVPR2019.pdf)] Graph Attention Convolution for Point Cloud Segmentation. [__`seg.`__]
@@ -135,11 +135,12 @@
 - [🥳](notes/A-CNN/README.md) [[CVPR](http://export.arxiv.org/abs/1904.08017)] A-CNN: Annularly Convolutional Neural Networks on Point Clouds. [__`cls.`__ __`seg.`__]
   - 固定不同范围内 KNN 获得多尺度 K邻近
   - 投影后排序，并构建环卷积
-- [🥳](notes/PointConv/README.md) [[CVPR](https://arxiv.org/abs/1811.07246)] PointConv: Deep Convolutional Networks on 3D Point Clouds. [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
-  - KNNG
-  - 卷积（g：MLP1(△p)，x：hj/MLP2(dj)）
-  - 静态图
-  - 效率卷积：通道共享一组卷积核 + MLP
+- [🥳](notes/PointConv/README.md) [[CVPR](https://arxiv.org/abs/1811.07246)] PointConv: Deep Convolutional Networks on 3D Point Clouds. [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:  
+  - K邻近
+  - 静态相对坐标
+  - 参考蒙特卡罗估计为每个点引入**度**信息
+  - 卷积：Sum(MLP(△p) * Cin / MLP(d))
+  - 效率卷积：各通道共享卷积核，通过MLP转换到最后的输出
 - 💩 联合优化 [[CVPR](https://arxiv.org/abs/1812.11647)] Path-Invariant Map Networks. [[tensorflow](https://github.com/zaiweizhang/path_invariance_map_network)] [__`seg.`__ __`oth.`__]
 - 💩 数据集 [[CVPR](https://arxiv.org/abs/1812.02713)] PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding. [[code](https://github.com/daerduoCarey/partnet_dataset)] [__`dat.`__ __`seg.`__]
   - 新数据集
