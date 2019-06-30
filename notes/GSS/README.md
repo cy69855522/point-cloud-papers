@@ -12,11 +12,33 @@
 ![](公式2.png)
 - 对于每个点 p，获得一组 K 近邻集合｛xp，xi-xp for i in K｝
 - 使用 PointNet(ELU激活) 提取区域集合信息作为 p 点的特征
-## GSA 自注意变换器
+## GSA 与 GSS
+![](图3.png)
+### GSA 自注意变换器
 ![](公式3.png)
+- S(Q,X) = softmax(QX^T/√c), 此处 √c 用于控制内积尺度，避免 softmax 非 1 即 0
+- σ 为 ELU 函数
 
-## GSS Gumbel子集采样
+![](公式4.png)
+- 分组式高效多头自注意力
+- 参考 MobileNet 的 depth-wise，将 x 按通道分为多组，每组组内共享一个线性变换矩阵 W，然后通过自注意力机制获得同通道数的变换后的 wx（注意此处是wx，相较于x，其通道意义已经被改变）
+
+![](公式5.png)
+- 将多组通道拼接
+
+![](公式6.png)
+- 按规则 shuffle
+
+![](公式7.png)
+- 与原 x 进行快捷连接
+- 通过 GN（group normalization） 调整分布
+### GSS Gumbel子集采样
+![](公式8.png)
+- 受 Attention-based MIL pooling 启发，作者使用类似手法对点集进行可微池化
+- 此处使用 gumbel 是因为作者认为直接使用 softmax 的池化是**不可追溯的**和**难以解释的**
+- 相当于在点上做 N(i+1) 次选择，下标代表层数
 ## 前向传播
+![](模型.png)
 
 # 实验结果
 ## 语义分割
