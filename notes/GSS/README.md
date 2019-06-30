@@ -14,6 +14,7 @@
 - 使用 PointNet(ELU激活) 提取区域集合信息作为 p 点的特征
 ## GSA 与 GSS
 ![](采样.png)
+- gumbel 在训练阶段使用软连接传递梯度并逐渐退火至多项式分布，在测试阶段使用硬连接
 ### GSA 自注意变换器
 ![](公式3.png)
 - S(Q,X) = softmax(QX^T/√c), 此处 √c 用于控制内积尺度，避免 softmax 非 1 即 0
@@ -39,9 +40,27 @@
 - 相当于在点上做 N(i+1) 次选择，下标代表层数
 ## 前向传播
 ![](模型.png)
-
+- 语义分割模型不采用下采样
+- element-wise loss 代表使用 共享MLP 对剩下的每个点分别输出预测结果，然后算平均交叉熵损失，作者称这样可以加速训练，对最终结果无影响
 # 实验结果
-## 语义分割
+## ModelNet40
+![](实验1.png)
+- Although GSS is theoretically superior to FPS, the Gumbel noises also serve as a (too) strong regularization. Instead of using GSS in all down-sampling, we ﬁnd that replacing the ﬁrst down-sampling with FPS performs slightly better in our experiments.
+
+![](实验2.png)
+- 如图所示，我们的模型以极高的参数量和可接受的速度实现了竞争性能。由于PyTorch（0.4.1）中组线性层的支持不足，低水平实施优化仍然存在速度的提高。请注意，采用下采样的PAT可以以更低的计算成本实现更好的性能，而GSS可以通过可忽略的负担进一步提高FPS
+## S3DIS室内场景分割
+![](实验3.png)
+
+![](实验4.png)
+- 为了进一步分析PointCNN和我们的方法之间的性能，我们比较了AREAS和Area5上的每级IoU和平均每级精度（mAcc）。如表4所示，在AREAS上，我们的方法在mAcc方面优于PointCNN;在第5区，我们的方法在mIoU和mAcc方面都优于PointCNN，在大多数类上都优于每级IoU
+## 事件相机流作为点云：DVS128手势识别
+![](图4.png)
+![](图5.png)
+- 动态视觉传感器（DVS）是一种生物启发的事件相机，“仅在像素检测到变化时才传输数据”[1]。在128×128传感器矩阵上，它记录相应位置是否有变化（通过用户定义的阈值），以微秒为单位。
+
+![](实验5.png)
+## 消融实验
 
 # 改进方向
 - 1、
