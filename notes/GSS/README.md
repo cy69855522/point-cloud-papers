@@ -13,7 +13,7 @@
 - 对于每个点 p，获得一组 K 近邻集合｛xp，xi-xp for i in K｝
 - 使用 PointNet(ELU激活) 提取区域集合信息作为 p 点的特征
 ## GSA 与 GSS
-![](图3.png)
+![](采样.png)
 ### GSA 自注意变换器
 ![](公式3.png)
 - S(Q,X) = softmax(QX^T/√c), 此处 √c 用于控制内积尺度，避免 softmax 非 1 即 0
