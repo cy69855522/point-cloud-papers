@@ -134,6 +134,8 @@
 - 💩 晶格 [[CVPR](https://raoyongming.github.io/files/SFCNN.pdf)] Spherical Fractal Convolutional Neural Networks for Point Cloud Recognition. [__`cls.`__ __`seg.`__]
   - 把点云映射到球体上
 - [🥳](notes/GSS/README.md) [[CVPR](https://arxiv.org/abs/1904.03375v1)] Modeling Point Clouds with Self-Attention and Gumbel Subset Sampling. [__`cls.`__ __`seg.`__]
+  - 自注意力层代替卷积
+  - gumbel子集采样
 - [🥳](notes/A-CNN/README.md) [[CVPR](http://export.arxiv.org/abs/1904.08017)] A-CNN: Annularly Convolutional Neural Networks on Point Clouds. [__`cls.`__ __`seg.`__]
   - 固定不同范围内 KNN 获得多尺度 K邻近
   - 投影后排序，并构建环卷积
