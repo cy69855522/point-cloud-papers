@@ -39,7 +39,8 @@
 - 1、
   - 
 # 疑问
-- 
+![](疑问1.png)
+- 不知道具体怎么分的
 
 # 参考
 - [CSDN 门控CNN](https://blog.csdn.net/liuchonge/article/details/70238350)
