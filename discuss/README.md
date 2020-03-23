@@ -21,9 +21,15 @@
 ![](结果对比.png)
 
 # 新模型
+![](矢量图.jpg)
+
 - EigInterpolate CNN(fps(0.1) 64 64 KI9 BN) CNN(fps(0.1) 64 64 KI9 BN, fps(0.1) 128 128 KI9 BN) Cat(256) MLP(1024) MaxMeanPooling() FC(512, 256, 40)
 - 93.2 18
 
 # 下一步
 - 刷榜、刷对比
 - 语义分割，大点云
+
+# 问题
+- 掉线
+- 搜索架构的算吗
